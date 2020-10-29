@@ -1,159 +1,295 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:gravity="center"
-    android:background="#ffffff">
-
-    <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:id="@+id/img"
-        app:neomorph_view_type="rectangular"
-        app:neomorph_shadow_type="outer"
-        app:neomorph_elevation="6dp"
-        app:neomorph_corner_radius="10dp"
-        app:neomorph_background_color="@color/Light"
-        app:neomorph_shadow_color="@color/neomorph_shadow_color"
-        app:neomorph_highlight_color="@color/white"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="5dp">
-
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/app_icon"/>
-    </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
-
-    <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/email"
-        app:neomorph_view_type="rectangular"
-        app:neomorph_shadow_type="outer"
-        app:neomorph_elevation="6dp"
-        app:neomorph_corner_radius="10dp"
-        app:neomorph_background_color="@color/Light"
-        app:neomorph_shadow_color="@color/neomorph_shadow_color"
-        app:neomorph_highlight_color="@color/white"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/img">
-
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:id="@+id/emailEditText"
-            android:hint="email"
-            android:layout_gravity="center"
-            android:background="#ffffff"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"/>
-    </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
-
-    <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/pass"
-        app:neomorph_view_type="rectangular"
-        app:neomorph_shadow_type="outer"
-        app:neomorph_elevation="6dp"
-        app:neomorph_corner_radius="10dp"
-        app:neomorph_background_color="@color/Light"
-        app:neomorph_shadow_color="@color/neomorph_shadow_color"
-        app:neomorph_highlight_color="@color/white"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/email">
-
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:id="@+id/passwordEditText"
-            android:hint="password"
-            android:layout_gravity="center"
-            android:background="#ffffff"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"/>
-    </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
-
-    <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnLogin"
-        app:neomorph_view_type="rectangular"
-        app:neomorph_shadow_type="outer"
-        app:neomorph_elevation="6dp"
-        app:neomorph_corner_radius="10dp"
-        app:neomorph_background_color="@color/Light"
-        app:neomorph_shadow_color="@color/neomorph_shadow_color"
-        app:neomorph_highlight_color="@color/white"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/pass">
-
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="45dp"
-            android:background="#ffffff"
-            android:text="Login"
-            android:textSize="16dp"
-            android:textColor="@color/md_black_1000"
-            android:id="@+id/loginButton"/>
-    </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@id/btnLogin"
-        android:layout_centerHorizontal="true">
+        android:background="@color/windowBackground">
 
         <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/img"
             app:neomorph_view_type="rectangular"
             app:neomorph_shadow_type="outer"
-            app:neomorph_elevation="4dp"
-            app:neomorph_corner_radius="30dp"
-            app:neomorph_background_color="@color/Light"
-            app:neomorph_shadow_color="@color/neomorph_shadow_color"
-            app:neomorph_highlight_color="@color/white"
+            app:neomorph_elevation="8dp"
+            app:neomorph_corner_radius="10dp"
+            app:neomorph_background_color="@color/n_background_color"
+            app:neomorph_shadow_color="@color/n_shadow_color"
+            app:neomorph_highlight_color="@color/n_h_color"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/btnLogin">
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/com_facebook_button_icon_white"/>
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/app_icon"/>
         </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
         <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/email"
             app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_type="outer"
-            app:neomorph_elevation="4dp"
-            app:neomorph_corner_radius="30dp"
-            app:neomorph_background_color="@color/Light"
-            app:neomorph_shadow_color="@color/neomorph_shadow_color"
-            app:neomorph_highlight_color="@color/white"
+            app:neomorph_shadow_type="inner"
+            app:neomorph_elevation="8dp"
+            app:neomorph_corner_radius="10dp"
+            app:neomorph_background_color="@color/n_background_color"
+            app:neomorph_shadow_color="@color/n_shadow_color"
+            app:neomorph_highlight_color="@color/n_h_color"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/btnLogin">
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/img">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/backToLoginTextView"
-                android:src="@drawable/messenger_button_white_bg_round"
-                />
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:id="@+id/emailEditText"
+                android:hint="email"
+                android:layout_gravity="center"
+                android:background="#ffffff"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
         </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
-    </LinearLayout>
-</RelativeLayout>
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pass"
+            app:neomorph_view_type="rectangular"
+            app:neomorph_shadow_type="inner"
+            app:neomorph_elevation="8dp"
+            app:neomorph_corner_radius="10dp"
+            app:neomorph_background_color="@color/n_background_color"
+            app:neomorph_shadow_color="@color/n_shadow_color"
+            app:neomorph_highlight_color="@color/n_h_color"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/email">
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:id="@+id/passwordEditText"
+                android:hint="password"
+                android:layout_gravity="center"
+                android:background="#ffffff"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        <Button
+            android:id="@+id/forgotPasswordButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/pass"
+            android:layout_marginTop="-20dp"
+            android:layout_alignRight="@id/pass"
+            android:text="@string/login__forgot_your_password"
+            android:textAllCaps="false"
+            android:textColor="@color/text__primary_light"
+            app:font='@{"normal"}'
+            app:textSize='@{"button_text"}'
+            tools:text="@string/login__forgot_your_password" />
+
+        <CheckBox
+            android:id="@+id/privacyPolicyCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/register__check_option"
+            android:textColor="@color/md_blue_grey_200"
+            app:font='@{"normal"}'
+            android:checked="true"
+            android:layout_below="@id/forgotPasswordButton"/>
+
+        <LinearLayout
+            android:id="@+id/login_or_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/privacyPolicyCheckbox"
+            android:layout_centerHorizontal="true">
+
+            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/register_now"
+                app:neomorph_view_type="rectangular"
+                app:neomorph_shadow_type="inner"
+                app:neomorph_elevation="5dp"
+                app:neomorph_corner_radius="10dp"
+                app:neomorph_background_color="@color/n_background_color"
+                app:neomorph_shadow_color="@color/n_shadow_color"
+                app:neomorph_highlight_color="@color/n_h_color"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/privacyPolicyCheckbox">
+
+                <Button
+                    android:layout_width="140dp"
+                    android:layout_height="45dp"
+                    android:background="#ffffff"
+                    android:text="Register"
+                    android:textSize="16dp"
+                    android:textColor="@color/md_black_1000"
+                    android:id="@+id/registerButton"/>
+            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnLogin"
+                app:neomorph_view_type="rectangular"
+                app:neomorph_shadow_type="inner"
+                app:neomorph_elevation="5dp"
+                app:neomorph_corner_radius="10dp"
+                app:neomorph_background_color="@color/n_background_color"
+                app:neomorph_shadow_color="@color/n_shadow_color"
+                app:neomorph_highlight_color="@color/n_h_color"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/privacyPolicyCheckbox">
+
+                <Button
+                    android:layout_width="140dp"
+                    android:layout_height="45dp"
+                    android:background="#ffffff"
+                    android:text="Login"
+                    android:textSize="16dp"
+                    android:textColor="@color/md_black_1000"
+                    android:id="@+id/loginButton"/>
+            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/login_or_register"
+            android:layout_centerHorizontal="true">
+
+            <!--////////////////////////////////////////////////-->
+            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                app:neomorph_view_type="circular"
+                app:neomorph_shadow_type="outer"
+                app:neomorph_elevation="4dp"
+                app:neomorph_corner_radius="30dp"
+                app:neomorph_background_color="@color/n_background_color"
+                app:neomorph_shadow_color="@color/n_shadow_color"
+                app:neomorph_highlight_color="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/btnLogin">
+
+                <ImageView
+                    android:id="@+id/googleLoginButton"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:src="@drawable/rounded_google"/>
+
+                <View
+                    android:id="@+id/googleSignInView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/black_alpha_50"
+                    app:layout_constraintBottom_toBottomOf="@+id/googleLoginButton"
+                    app:layout_constraintEnd_toEndOf="@+id/googleLoginButton"
+                    app:layout_constraintHorizontal_bias="0.507"
+                    app:layout_constraintStart_toStartOf="@+id/googleLoginButton"
+                    app:layout_constraintTop_toTopOf="@+id/googleLoginButton"
+                    app:layout_constraintVertical_bias="0.6" />
+            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                app:neomorph_view_type="circular"
+                app:neomorph_shadow_type="outer"
+                app:neomorph_elevation="4dp"
+                app:neomorph_corner_radius="30dp"
+                app:neomorph_background_color="@color/n_background_color"
+                app:neomorph_shadow_color="@color/n_shadow_color"
+                app:neomorph_highlight_color="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/btnLogin">
+
+                <ImageView
+                    android:id="@+id/fb_login_button"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:src="@drawable/rounded_fb" />
+
+                <View
+                    android:id="@+id/facebookSignInView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/black_alpha_50"
+                    app:layout_constraintBottom_toBottomOf="@+id/fb_login_button"
+                    app:layout_constraintEnd_toEndOf="@+id/fb_login_button"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/fb_login_button"
+                    app:layout_constraintTop_toTopOf="@+id/fb_login_button"
+                    app:layout_constraintVertical_bias="1.0" />
+            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                app:neomorph_view_type="circular"
+                app:neomorph_shadow_type="outer"
+                app:neomorph_elevation="4dp"
+                app:neomorph_corner_radius="30dp"
+                app:neomorph_background_color="@color/n_background_color"
+                app:neomorph_shadow_color="@color/n_shadow_color"
+                app:neomorph_highlight_color="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/btnLogin">
+
+                <ImageView
+                    android:id="@+id/phoneLoginButton"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:src="@drawable/phone_login"/>
+
+                <View
+                    android:id="@+id/phoneSignInView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/black_alpha_50"
+                    app:layout_constraintBottom_toBottomOf="@+id/phoneLoginButton"
+                    app:layout_constraintEnd_toEndOf="@+id/phoneLoginButton"
+                    app:layout_constraintHorizontal_bias="0.507"
+                    app:layout_constraintStart_toStartOf="@+id/phoneLoginButton"
+                    app:layout_constraintTop_toTopOf="@+id/phoneLoginButton"
+                    app:layout_constraintVertical_bias="0.6" />
+            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+            <!--////////////////////////////////////////////////-->
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
