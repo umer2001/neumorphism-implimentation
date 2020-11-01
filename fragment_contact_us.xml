@@ -1,0 +1,166 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/windowBackground">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:shadowDx="-10"
+            android:shadowDy="-5"
+            android:shadowColor="#000"
+            android:shadowRadius="7"
+            android:text="Contact Us"/>
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_name"
+            app:neomorph_view_type="rectangular"
+            app:neomorph_shadow_type="inner"
+            app:neomorph_elevation="8dp"
+            app:neomorph_corner_radius="10dp"
+            app:neomorph_background_color="@color/n_background_color"
+            app:neomorph_shadow_color="@color/n_shadow_color"
+            app:neomorph_highlight_color="@color/n_h_color"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/heading">
+
+            <EditText
+                android:id="@+id/contactNameTextInput"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:hint="@string/contact_us__name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:layout_gravity="center"
+                android:background="#ffffff"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_email"
+            app:neomorph_view_type="rectangular"
+            app:neomorph_shadow_type="inner"
+            app:neomorph_elevation="8dp"
+            app:neomorph_corner_radius="10dp"
+            app:neomorph_background_color="@color/n_background_color"
+            app:neomorph_shadow_color="@color/n_shadow_color"
+            app:neomorph_highlight_color="@color/n_h_color"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/text_name">
+
+            <EditText
+                android:id="@+id/contactEmailTextInput"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:hint="@string/contact_us__email"
+                android:layout_gravity="center"
+                android:background="#ffffff"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_phone"
+            app:neomorph_view_type="rectangular"
+            app:neomorph_shadow_type="inner"
+            app:neomorph_elevation="8dp"
+            app:neomorph_corner_radius="10dp"
+            app:neomorph_background_color="@color/n_background_color"
+            app:neomorph_shadow_color="@color/n_shadow_color"
+            app:neomorph_highlight_color="@color/n_h_color"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/text_email">
+
+            <EditText
+                android:id="@+id/contactPhoneTextInput"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:inputType="textEmailAddress|phone"
+                android:singleLine="true"
+                android:hint="@string/contact_us__phone"
+                android:layout_gravity="center"
+                android:background="#ffffff"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_desc"
+            app:neomorph_view_type="rectangular"
+            app:neomorph_shadow_type="inner"
+            app:neomorph_elevation="8dp"
+            app:neomorph_corner_radius="10dp"
+            app:neomorph_background_color="@color/n_background_color"
+            app:neomorph_shadow_color="@color/n_shadow_color"
+            app:neomorph_highlight_color="@color/n_h_color"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/text_phone">
+
+            <EditText
+                android:id="@+id/contactDescEditText"
+                android:layout_width="300dp"
+                android:minHeight="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="textAutoComplete|textMultiLine|textLongMessage"
+                android:singleLine="true"
+                android:hint="@string/contact_us__message"
+                android:layout_gravity="center"
+                android:background="#ffffff"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/register"
+            app:neomorph_view_type="rectangular"
+            app:neomorph_shadow_type="inner"
+            app:neomorph_elevation="5dp"
+            app:neomorph_corner_radius="10dp"
+            app:neomorph_background_color="@color/n_background_color"
+            app:neomorph_shadow_color="@color/n_shadow_color"
+            app:neomorph_highlight_color="@color/n_h_color"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/text_desc">
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:background="#ffffff"
+                android:text="@string/contact_us__submit"
+                android:textSize="16dp"
+                android:textColor="@color/md_black_1000"/>
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+    </RelativeLayout>
+
+</layout>
