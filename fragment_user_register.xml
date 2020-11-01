@@ -33,7 +33,7 @@
         <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/text_input_email"
+            android:id="@+id/userNameTextInput"
             app:neomorph_view_type="rectangular"
             app:neomorph_shadow_type="inner"
             app:neomorph_elevation="8dp"
@@ -49,9 +49,9 @@
                 android:id="@+id/nameEditText"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
+                android:hint="@string/register__user_name"
                 android:imeOptions="actionNext"
                 android:inputType="textEmailAddress"
-                android:hint="username"
                 android:layout_gravity="center"
                 android:background="#ffffff"
                 android:paddingStart="10dp"
@@ -61,7 +61,7 @@
         <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/pass"
+            android:id="@+id/emailTextInput"
             app:neomorph_view_type="rectangular"
             app:neomorph_shadow_type="inner"
             app:neomorph_elevation="8dp"
@@ -71,15 +71,16 @@
             app:neomorph_highlight_color="@color/n_h_color"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:layout_below="@id/text_input_email">
+            android:layout_below="@id/userNameTextInput">
 
             <EditText
-                android:id="@+id/phoneEditText"
+                android:id="@+id/emailEditText"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:inputType="phone"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
                 android:singleLine="true"
-                android:hint="@string/phone_login_phone_hint"
+                android:hint="@string/register__email"
                 android:layout_gravity="center"
                 android:background="#ffffff"
                 android:paddingStart="10dp"
@@ -89,7 +90,48 @@
         <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnLogin"
+            android:id="@+id/passwordTextInput"
+            app:neomorph_view_type="rectangular"
+            app:neomorph_shadow_type="inner"
+            app:neomorph_elevation="8dp"
+            app:neomorph_corner_radius="10dp"
+            app:neomorph_background_color="@color/n_background_color"
+            app:neomorph_shadow_color="@color/n_shadow_color"
+            app:neomorph_highlight_color="@color/n_h_color"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/emailTextInput">
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:hint="@string/register__password"
+                android:layout_gravity="center"
+                android:background="#ffffff"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        <CheckBox
+            android:id="@+id/policyAndPrivacyCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-12dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/register__check_option"
+            android:textColor="@color/md_blue_grey_200"
+            app:font='@{"normal"}'
+            android:checked="true"
+            android:layout_below="@id/passwordTextInput"/>
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/register"
             app:neomorph_view_type="rectangular"
             app:neomorph_shadow_type="inner"
             app:neomorph_elevation="5dp"
@@ -99,33 +141,33 @@
             app:neomorph_highlight_color="@color/n_h_color"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:layout_below="@+id/pass">
+            android:layout_below="@id/policyAndPrivacyCheckBox">
 
             <Button
-                android:id="@+id/addPhoneButton"
+                android:id="@+id/registerButton"
                 android:layout_width="250dp"
                 android:layout_height="45dp"
                 android:background="#ffffff"
-                android:text="@string/login__with_phone"
+                android:text="@string/register__register"
                 android:textSize="16dp"
                 android:textColor="@color/md_black_1000"/>
         </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
         <Button
-            android:id="@+id/backToLoginTextView"
+            android:id="@+id/loginButton"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="16dp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/btnLogin"
-            android:text="@string/verify_phone__back_login"
+            android:layout_below="@id/register"
+            android:text="@string/register__back_to_login"
             android:textAllCaps="false"
             android:textColor="@color/md_black_1000"
             app:font='@{"normal"}'
             app:textSize='@{"button_text"}'
-            tools:text="@string/forgot_password__back_to_login" />
+            tools:text="@string/register__back_to_login" />
 
     </RelativeLayout>
 
