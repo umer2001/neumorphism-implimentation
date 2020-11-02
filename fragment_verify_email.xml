@@ -1,0 +1,159 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windowBackground">
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/heading_otp"
+            app:neomorph_view_type="rectangular"
+            app:neomorph_shadow_type="outer"
+            app:neomorph_elevation="0.5dp"
+            app:neomorph_corner_radius="10dp"
+            app:neomorph_background_color="#ffffff"
+            app:neomorph_shadow_color="@color/n_shadow_color"
+            app:neomorph_highlight_color="@color/n_h_color">
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="40sp"
+                android:text="OTP Verification"
+                android:background="#ffffff"/>
+
+            <TextView
+                android:id="@+id/informationTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/verify_email__informateion"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginTop="60dp"/>
+
+            <TextView
+                android:id="@+id/emailTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/verify_email__informateion"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                tools:text="Someone@gmail.com"
+                android:layout_marginTop="100dp"
+                android:paddingBottom="5dp"/>
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_input_otp"
+            app:neomorph_view_type="rectangular"
+            app:neomorph_shadow_type="inner"
+            app:neomorph_elevation="8dp"
+            app:neomorph_corner_radius="10dp"
+            app:neomorph_background_color="@color/n_background_color"
+            app:neomorph_shadow_color="@color/n_shadow_color"
+            app:neomorph_highlight_color="@color/n_h_color"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="220dp"
+            android:layout_below="@+id/heading_otp">
+
+            <EditText
+                android:id="@+id/enterCodeEditText"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:hint="@string/verify_email__enter_code"
+                android:layout_gravity="center"
+                android:background="#ffffff"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        <Button
+            android:id="@+id/resentCodeButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/text_input_otp"
+            android:layout_marginTop="-20dp"
+            android:layout_alignRight="@id/text_input_otp"
+            android:text="@string/verify_email__resent_code"
+            android:textAllCaps="false"
+            android:textColor="@color/text__primary_light"
+            app:font='@{"normal"}'
+            app:textSize='@{"button_text"}' />
+
+        <LinearLayout
+            android:id="@+id/change_or_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/resentCodeButton"
+            android:layout_centerHorizontal="true">
+
+            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/change_email"
+                app:neomorph_view_type="rectangular"
+                app:neomorph_shadow_type="outer"
+                app:neomorph_elevation="5dp"
+                app:neomorph_corner_radius="10dp"
+                app:neomorph_background_color="@color/n_background_color"
+                app:neomorph_shadow_color="@color/n_shadow_color"
+                app:neomorph_highlight_color="@color/n_h_color"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:layout_width="140dp"
+                    android:layout_height="45dp"
+                    android:background="#ffffff"
+                    android:text="@string/verify_email__change_email"
+                    android:textSize="16dp"
+                    android:textColor="@color/md_black_1000"
+                    android:id="@+id/changeEmailButton"/>
+            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/submit"
+                app:neomorph_view_type="rectangular"
+                app:neomorph_shadow_type="outer"
+                app:neomorph_elevation="5dp"
+                app:neomorph_corner_radius="10dp"
+                app:neomorph_background_color="@color/n_background_color"
+                app:neomorph_shadow_color="@color/n_shadow_color"
+                app:neomorph_highlight_color="@color/n_h_color"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:layout_width="140dp"
+                    android:layout_height="45dp"
+                    android:background="#ffffff"
+                    android:text="@string/verify_email__submit"
+                    android:textSize="16dp"
+                    android:textColor="@color/md_black_1000"
+                    android:id="@+id/submitButton"/>
+            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>
