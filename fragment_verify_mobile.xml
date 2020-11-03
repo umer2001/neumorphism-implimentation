@@ -4,104 +4,92 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/windowBackground">
+        android:gravity="center"
+        android:background="@color/Light_Background">
 
-        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        <TextView
+            android:id="@+id/heading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/heading_otp"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_type="outer"
-            app:neomorph_elevation="0.5dp"
-            app:neomorph_corner_radius="10dp"
-            app:neomorph_background_color="#ffffff"
-            app:neomorph_shadow_color="@color/n_shadow_color"
-            app:neomorph_highlight_color="@color/n_h_color">
+            android:paddingStart="10dp"
+            android:textSize="40sp"
+            android:text="OTP Verification"
+            android:layout_marginBottom="20dp"
+            android:layout_above="@id/otp_card"/>
 
-            <TextView
-                android:id="@+id/heading"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="40sp"
-                android:text="OTP Verification"
-                android:background="#ffffff"/>
-
-            <TextView
-                android:id="@+id/informationTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="@string/verify_phone__informateion"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:layout_marginTop="60dp"/>
-
-            <TextView
-                android:id="@+id/phoneTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="@string/verify_email__informateion"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                tools:text="Someone@gmail.com"
-                android:layout_marginTop="100dp"
-                android:paddingBottom="5dp"/>
-        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
-
-        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-            android:layout_width="wrap_content"
+        <soup.neumorphism.NeumorphCardView
+            style="@style/Widget.Neumorph.CardView"
+            android:id="@+id/otp_card"
+            android:layout_width="380dp"
             android:layout_height="wrap_content"
-            android:id="@+id/text_input_otp"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_type="inner"
-            app:neomorph_elevation="8dp"
-            app:neomorph_corner_radius="10dp"
-            app:neomorph_background_color="@color/n_background_color"
-            app:neomorph_shadow_color="@color/n_shadow_color"
-            app:neomorph_highlight_color="@color/n_h_color"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="220dp"
-            android:layout_below="@+id/heading_otp">
+            android:layout_centerHorizontal="true">
 
-            <EditText
-                android:id="@+id/enterCodeEditText"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:imeOptions="actionNext"
-                android:inputType="textPersonName"
-                android:hint="@string/verify_phone_code"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_gravity="center"
-                android:background="#ffffff"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"/>
-        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+                android:gravity="center"
+                android:orientation="vertical">
 
-        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/submit"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_type="outer"
-            app:neomorph_elevation="5dp"
-            app:neomorph_corner_radius="10dp"
-            app:neomorph_background_color="@color/n_background_color"
-            app:neomorph_shadow_color="@color/n_shadow_color"
-            app:neomorph_highlight_color="@color/n_h_color"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/text_input_otp">
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/sms_token"/>
 
-            <Button
-                android:layout_width="250dp"
-                android:layout_height="45dp"
-                android:background="#ffffff"
-                android:text="@string/verify_email__submit"
-                android:textSize="16dp"
-                android:textColor="@color/md_black_1000"
-                android:id="@+id/submitButton"/>
-        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="@string/verify_phone__informateion"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/phoneTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/verify_email__informateion"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    tools:text="Someone@gmail.com"/>
+
+                <soup.neumorphism.NeumorphCardView
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    app:neumorph_shapeType="pressed"
+                    android:id="@+id/text_input_otp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/img">
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/enterCodeEditText"
+                        android:hint="@string/verify_phone_code"
+                        android:inputType="text"
+                        android:background="@drawable/no_background"
+                        android:textCursorDrawable="@drawable/cursor"
+                        android:layout_gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"/>
+                </soup.neumorphism.NeumorphCardView>
+
+                <soup.neumorphism.NeumorphButton
+                    style="@style/Widget.Neumorph.Button"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/submitButton"
+                    android:text="@string/verify_email__submit"/>
+
+            </LinearLayout>
+
+        </soup.neumorphism.NeumorphCardView>
 
     </RelativeLayout>
 </layout>

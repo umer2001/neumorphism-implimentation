@@ -6,81 +6,67 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:gravity="center"
-        android:background="@color/windowBackground">
+        android:background="@color/Light_Background">
 
-        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/img"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:id="@+id/img"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_type="outer"
-            app:neomorph_elevation="8dp"
-            app:neomorph_corner_radius="10dp"
-            app:neomorph_background_color="@color/n_background_color"
-            app:neomorph_shadow_color="@color/n_shadow_color"
-            app:neomorph_highlight_color="@color/n_h_color"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp">
+            app:neumorph_shapeType="flat"
+            android:layout_centerHorizontal="true">
 
             <ImageView
-                android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:src="@drawable/app_icon"/>
-        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+        </soup.neumorphism.NeumorphCardView>
 
-        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        <soup.neumorphism.NeumorphCardView
+            style="@style/Widget.Neumorph.CardView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
+            app:neumorph_shapeType="pressed"
             android:id="@+id/email"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_type="inner"
-            app:neomorph_elevation="8dp"
-            app:neomorph_corner_radius="10dp"
-            app:neomorph_background_color="@color/n_background_color"
-            app:neomorph_shadow_color="@color/n_shadow_color"
-            app:neomorph_highlight_color="@color/n_h_color"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:layout_below="@+id/img">
 
             <EditText
                 android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:id="@+id/emailEditText"
                 android:hint="email"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/no_background"
+                android:textCursorDrawable="@drawable/cursor"
                 android:layout_gravity="center"
-                android:background="#ffffff"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"/>
-        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+        </soup.neumorphism.NeumorphCardView>
 
-        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        <soup.neumorphism.NeumorphCardView
+            style="@style/Widget.Neumorph.CardView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
+            app:neumorph_shapeType="pressed"
             android:id="@+id/pass"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_type="inner"
-            app:neomorph_elevation="8dp"
-            app:neomorph_corner_radius="10dp"
-            app:neomorph_background_color="@color/n_background_color"
-            app:neomorph_shadow_color="@color/n_shadow_color"
-            app:neomorph_highlight_color="@color/n_h_color"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:layout_below="@+id/email">
 
             <EditText
                 android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:id="@+id/passwordEditText"
                 android:hint="password"
+                android:inputType="textPassword"
+                android:background="@drawable/no_background"
+                android:textCursorDrawable="@drawable/cursor"
                 android:layout_gravity="center"
-                android:background="#ffffff"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"/>
 
-        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+        </soup.neumorphism.NeumorphCardView>
 
         <Button
             android:id="@+id/forgotPasswordButton"
@@ -122,55 +108,20 @@
             android:layout_below="@id/privacyPolicyCheckbox"
             android:layout_centerHorizontal="true">
 
-            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-                android:layout_width="wrap_content"
+
+            <soup.neumorphism.NeumorphButton
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/register_now"
-                app:neomorph_view_type="rectangular"
-                app:neomorph_shadow_type="inner"
-                app:neomorph_elevation="5dp"
-                app:neomorph_corner_radius="10dp"
-                app:neomorph_background_color="@color/n_background_color"
-                app:neomorph_shadow_color="@color/n_shadow_color"
-                app:neomorph_highlight_color="@color/n_h_color"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/privacyPolicyCheckbox">
+                android:id="@+id/registerButton"
+                android:text="REGISTER"/>
 
-                <Button
-                    android:layout_width="140dp"
-                    android:layout_height="45dp"
-                    android:background="#ffffff"
-                    android:text="Register"
-                    android:textSize="16dp"
-                    android:textColor="@color/md_black_1000"
-                    android:id="@+id/registerButton"/>
-            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
-
-            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-                android:layout_width="wrap_content"
+            <soup.neumorphism.NeumorphButton
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnLogin"
-                app:neomorph_view_type="rectangular"
-                app:neomorph_shadow_type="inner"
-                app:neomorph_elevation="5dp"
-                app:neomorph_corner_radius="10dp"
-                app:neomorph_background_color="@color/n_background_color"
-                app:neomorph_shadow_color="@color/n_shadow_color"
-                app:neomorph_highlight_color="@color/n_h_color"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/privacyPolicyCheckbox">
-
-                <Button
-                    android:layout_width="140dp"
-                    android:layout_height="45dp"
-                    android:background="#ffffff"
-                    android:text="Login"
-                    android:textSize="16dp"
-                    android:textColor="@color/md_black_1000"
-                    android:id="@+id/loginButton"/>
-            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+                android:id="@+id/loginButton"
+                android:text="LOGIN"/>
 
         </LinearLayout>
 
@@ -186,18 +137,11 @@
             android:layout_centerHorizontal="true">
 
             <!--////////////////////////////////////////////////-->
-            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                app:neomorph_view_type="circular"
-                app:neomorph_shadow_type="outer"
-                app:neomorph_elevation="4dp"
-                app:neomorph_corner_radius="30dp"
-                app:neomorph_background_color="@color/n_background_color"
-                app:neomorph_shadow_color="@color/n_shadow_color"
-                app:neomorph_highlight_color="@color/white"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/btnLogin">
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:neumorph_shapeType="flat">
 
                 <ImageView
                     android:id="@+id/googleLoginButton"
@@ -220,20 +164,13 @@
                     app:layout_constraintStart_toStartOf="@+id/googleLoginButton"
                     app:layout_constraintTop_toTopOf="@+id/googleLoginButton"
                     app:layout_constraintVertical_bias="0.6" />
-            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+            </soup.neumorphism.NeumorphCardView>
 
-            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                app:neomorph_view_type="circular"
-                app:neomorph_shadow_type="outer"
-                app:neomorph_elevation="4dp"
-                app:neomorph_corner_radius="30dp"
-                app:neomorph_background_color="@color/n_background_color"
-                app:neomorph_shadow_color="@color/n_shadow_color"
-                app:neomorph_highlight_color="@color/white"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/btnLogin">
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:neumorph_shapeType="flat">
 
                 <ImageView
                     android:id="@+id/fb_login_button"
@@ -252,20 +189,13 @@
                     app:layout_constraintStart_toStartOf="@+id/fb_login_button"
                     app:layout_constraintTop_toTopOf="@+id/fb_login_button"
                     app:layout_constraintVertical_bias="1.0" />
-            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+            </soup.neumorphism.NeumorphCardView>
 
-            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                app:neomorph_view_type="circular"
-                app:neomorph_shadow_type="outer"
-                app:neomorph_elevation="4dp"
-                app:neomorph_corner_radius="30dp"
-                app:neomorph_background_color="@color/n_background_color"
-                app:neomorph_shadow_color="@color/n_shadow_color"
-                app:neomorph_highlight_color="@color/white"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/btnLogin">
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:neumorph_shapeType="flat">
 
                 <ImageView
                     android:id="@+id/phoneLoginButton"
@@ -288,7 +218,7 @@
                     app:layout_constraintStart_toStartOf="@+id/phoneLoginButton"
                     app:layout_constraintTop_toTopOf="@+id/phoneLoginButton"
                     app:layout_constraintVertical_bias="0.6" />
-            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+            </soup.neumorphism.NeumorphCardView>
             <!--////////////////////////////////////////////////-->
         </LinearLayout>
     </RelativeLayout>

@@ -7,109 +7,78 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:gravity="center"
-        android:background="@color/windowBackground">
+        android:background="@color/Light_Background">
 
-        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/img"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:id="@+id/img"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_type="outer"
-            app:neomorph_elevation="8dp"
-            app:neomorph_corner_radius="10dp"
-            app:neomorph_background_color="@color/n_background_color"
-            app:neomorph_shadow_color="@color/n_shadow_color"
-            app:neomorph_highlight_color="@color/n_h_color"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp">
+            app:neumorph_shapeType="flat"
+            android:layout_centerHorizontal="true">
 
             <ImageView
-                android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:src="@drawable/app_icon"/>
-        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+        </soup.neumorphism.NeumorphCardView>
 
-        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <soup.neumorphism.NeumorphCardView
+            style="@style/Widget.Neumorph.CardView"
             android:id="@+id/text_input_email"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_type="inner"
-            app:neomorph_elevation="8dp"
-            app:neomorph_corner_radius="10dp"
-            app:neomorph_background_color="@color/n_background_color"
-            app:neomorph_shadow_color="@color/n_shadow_color"
-            app:neomorph_highlight_color="@color/n_h_color"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            app:neumorph_shapeType="pressed"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:layout_below="@+id/img">
 
             <EditText
-                android:id="@+id/nameEditText"
                 android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
+                android:id="@+id/nameEditText"
                 android:imeOptions="actionNext"
                 android:inputType="textEmailAddress"
                 android:hint="username"
+                android:background="@drawable/no_background"
+                android:textCursorDrawable="@drawable/cursor"
                 android:layout_gravity="center"
-                android:background="#ffffff"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"/>
-        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+        </soup.neumorphism.NeumorphCardView>
 
-        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        <soup.neumorphism.NeumorphCardView
+            style="@style/Widget.Neumorph.CardView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
+            app:neumorph_shapeType="pressed"
             android:id="@+id/pass"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_type="inner"
-            app:neomorph_elevation="8dp"
-            app:neomorph_corner_radius="10dp"
-            app:neomorph_background_color="@color/n_background_color"
-            app:neomorph_shadow_color="@color/n_shadow_color"
-            app:neomorph_highlight_color="@color/n_h_color"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:layout_below="@id/text_input_email">
+            android:layout_below="@+id/text_input_email">
 
             <EditText
-                android:id="@+id/phoneEditText"
                 android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
+                android:id="@+id/phoneEditText"
                 android:inputType="phone"
                 android:singleLine="true"
                 android:hint="@string/phone_login_phone_hint"
+                android:background="@drawable/no_background"
+                android:textCursorDrawable="@drawable/cursor"
                 android:layout_gravity="center"
-                android:background="#ffffff"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"/>
-        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
 
-        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
-            android:layout_width="wrap_content"
+        </soup.neumorphism.NeumorphCardView>
+        
+        <soup.neumorphism.NeumorphButton
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:id="@+id/btnLogin"
-            app:neomorph_view_type="rectangular"
-            app:neomorph_shadow_type="inner"
-            app:neomorph_elevation="5dp"
-            app:neomorph_corner_radius="10dp"
-            app:neomorph_background_color="@color/n_background_color"
-            app:neomorph_shadow_color="@color/n_shadow_color"
-            app:neomorph_highlight_color="@color/n_h_color"
+            android:id="@+id/addPhoneButton"
+            android:text="@string/login__with_phone"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/pass">
-
-            <Button
-                android:id="@+id/addPhoneButton"
-                android:layout_width="250dp"
-                android:layout_height="45dp"
-                android:background="#ffffff"
-                android:text="@string/login__with_phone"
-                android:textSize="16dp"
-                android:textColor="@color/md_black_1000"/>
-        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+            android:layout_below="@id/pass"/>
 
         <Button
             android:id="@+id/backToLoginTextView"
@@ -119,7 +88,7 @@
             android:layout_marginTop="60dp"
             android:layout_marginBottom="16dp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/btnLogin"
+            android:layout_below="@id/addPhoneButton"
             android:text="@string/verify_phone__back_login"
             android:textAllCaps="false"
             android:textColor="@color/md_black_1000"
