@@ -1,0 +1,205 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.panaceasoft.pswallpaper.viewobject.User" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Light_Background"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/user_img"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="15dp"
+            android:text="Profile"
+            android:textSize="40sp" />
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/profile_card"
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-60dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <soup.neumorphism.NeumorphCardView
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    app:neumorph_shapeType="pressed">
+
+                    <EditText
+                        android:id="@+id/nameEditText"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/no_background"
+                        android:hint="@string/edit_profile__user_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="@{user.user_name}"
+                        android:textCursorDrawable="@drawable/cursor"
+                        tools:text="user name" />
+                </soup.neumorphism.NeumorphCardView>
+
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/emailTextInput"
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp"
+                    app:neumorph_shapeType="pressed">
+
+                    <EditText
+                        android:id="@+id/emailEditText"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/no_background"
+                        android:hint="@string/edit_profile__email"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="@{user.user_email}"
+                        android:textCursorDrawable="@drawable/cursor"
+                        tools:text="user@gmail.com" />
+                </soup.neumorphism.NeumorphCardView>
+
+                <soup.neumorphism.NeumorphCardView
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp"
+                    app:neumorph_shapeType="pressed">
+
+                    <EditText
+                        android:id="@+id/phoneEditText"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/no_background"
+                        android:hint="@string/about_us__phone"
+                        android:inputType="phone"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:text='@{user.user_phone.equals("") ? "-" : user.user_phone}'
+                        android:textCursorDrawable="@drawable/cursor"
+                        tools:text="+6534323232" />
+
+                </soup.neumorphism.NeumorphCardView>
+
+                <soup.neumorphism.NeumorphCardView
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:minHeight="80dp"
+                    app:neumorph_shapeType="pressed">
+
+                    <EditText
+                        android:id="@+id/aboutMeEditText"
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/no_background"
+                        android:hint="@string/edit_profile__about_me"
+                        android:imeOptions="actionNext"
+                        android:inputType="textAutoComplete|textMultiLine|textLongMessage"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="false"
+                        android:text='@{user.user_about_me.equals("") ? "-" : user.user_about_me }'
+                        android:textCursorDrawable="@drawable/cursor"
+                        tools:text="About Me" />
+                </soup.neumorphism.NeumorphCardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <soup.neumorphism.NeumorphButton
+                        android:id="@+id/passwordChangeButton"
+                        style="@style/Widget.Neumorph.Button"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/edit_profile__password_change" />
+
+                    <soup.neumorphism.NeumorphButton
+                        android:id="@+id/saveButton"
+                        style="@style/Widget.Neumorph.Button"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/edit_profile__save" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/user_img"
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_centerHorizontal="true"
+            app:neumorph_shapeType="flat">
+
+            <ImageView
+                android:id="@+id/profileImageview"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/image__default_image"
+                android:src="@drawable/default_profile"
+                app:imageProfileUrl="@{user.user_profile_photo}" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignRight="@id/user_img"
+            android:layout_marginTop="-15dp"
+            android:layout_marginRight="-10dp">
+
+            <ImageButton
+                android:id="@+id/profileeditImageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/no_background"
+                android:contentDescription="@string/image__default_image"
+                android:src="@android:drawable/ic_menu_edit" />
+        </soup.neumorphism.NeumorphCardView>
+
+    </RelativeLayout>
+</layout>

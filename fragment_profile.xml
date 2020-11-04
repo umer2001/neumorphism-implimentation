@@ -26,8 +26,8 @@
             android:textSize="40sp" />
 
         <soup.neumorphism.NeumorphCardView
-            style="@style/Widget.Neumorph.CardView"
             android:id="@+id/profile_card"
+            style="@style/Widget.Neumorph.CardView"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/user_img"
@@ -168,8 +168,8 @@
         <soup.neumorphism.NeumorphCardView
             android:id="@+id/user_img"
             style="@style/Widget.Neumorph.CardView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:layout_centerHorizontal="true"
             app:neumorph_shapeType="flat">
 
@@ -177,6 +177,7 @@
                 android:id="@+id/imageView8"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_gravity="center"
                 android:contentDescription="@string/image__default_image"
                 android:src="@drawable/default_profile"
                 app:imageProfileUrl="@{user.user_profile_photo}" />
