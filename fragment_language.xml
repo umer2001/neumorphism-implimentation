@@ -1,0 +1,67 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Light_Background">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="15dp"
+            android:text="Set Language"
+            android:textSize="40sp" />
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/cardLanguageView"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/heading">
+
+            <TextView
+                android:id="@+id/languageTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/search__notSet"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/text__primary"
+                android:textSize="@dimen/font_body_size"
+                app:font='@{"normal"}' />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/image_default__image"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:tint="@color/md_grey_400"
+                app:srcCompat="@drawable/down" />
+        </soup.neumorphism.NeumorphCardView>
+
+        <com.google.android.gms.ads.AdView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:adSize="SMART_BANNER"
+            app:adUnitId="@string/adview_banner_ad_key" />
+
+    </RelativeLayout>
+
+</layout>
