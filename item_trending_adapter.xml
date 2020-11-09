@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="allWallpapers"
+            type="com.panaceasoft.pswallpaper.viewobject.Wallpaper" />
+    </data>
+
+
+    <soup.neumorphism.NeumorphCardView
+        android:layout_width="160dp"
+        android:layout_height="250dp"
+        android:layout_margin="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/latestCategoryImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:baselineAlignBottom="false"
+                android:contentDescription="@string/image__default_image"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{allWallpapers.default_photo.image_path_thumb}"
+                tools:srcCompat="@drawable/placeholder_image" />
+
+            <ImageView
+                android:id="@+id/premiumImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:alpha="0.4"
+                android:baselineAlignBottom="false"
+                android:contentDescription="@string/image__default_image"
+                android:scaleType="fitXY"
+                android:src="@drawable/baseline_cross_white_bg_2"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/premiumTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:alpha="0.5"
+                android:text="@string/premium__premium"
+                android:textColorHint="@color/md_white_1000"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/premiumPriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/rounded_corner_shape_button"
+                android:textColor="@color/text__white"
+                android:visibility="gone"
+                tools:text="$ 100" />
+
+            <ImageView
+                android:id="@+id/gifImageView"
+                android:layout_width="@dimen/space_60"
+                android:layout_height="@dimen/space_32"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:scaleType="fitCenter"
+                android:visibility="gone"
+                app:srcCompat="@drawable/baseline_gif_logo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <com.like.LikeButton
+                    android:id="@+id/heartButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginBottom="13dp"
+                    app:anim_scale_factor="2"
+                    app:circle_end_color="@color/md_red_600"
+                    app:circle_start_color="@color/md_white_1000"
+                    app:dots_primary_color="@color/md_green_600"
+                    app:dots_secondary_color="@color/md_blue_300"
+                    app:icon_size="20dp"
+                    app:icon_type="heart"
+                    app:is_enabled="true"
+                    app:layout_constraintTop_toTopOf="@+id/view8"
+                    app:layout_constraintVertical_bias="0.538"
+                    app:like_drawable="@drawable/heart_on"
+                    app:unlike_drawable="@drawable/heart_off" />
+
+                <TextView
+                    android:id="@+id/count1TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/text__primary"
+                    app:font='@{"normal"}'
+                    tools:text="30 " />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:contentDescription="@string/image__default_image"
+                    android:scaleType="centerInside"
+                    android:tint="@color/md_icon_color"
+                    app:srcCompat="@drawable/baseline_trending_black_24" />
+
+                <TextView
+                    android:id="@+id/count2TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/text__primary"
+                    app:font='@{"normal"}'
+                    tools:text="30 " />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </soup.neumorphism.NeumorphCardView>
+
+</layout>
