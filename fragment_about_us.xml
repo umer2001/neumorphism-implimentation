@@ -1,0 +1,284 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="aboutUs"
+            type="com.panaceasoft.pswallpaper.viewobject.AboutUs" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Light_Background">
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/titleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="12dp"
+                        android:text="@{aboutUs.about_title}"
+                        android:textStyle="bold"
+                        app:font='@{"medium"}'
+                        app:textSize='@{"font_title_size"}'
+                        tools:text="Title" />
+
+                    <TextView
+                        android:id="@+id/descTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleTextView"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="12dp"
+                        android:lineSpacingExtra="@dimen/space_8"
+                        android:padding="4dp"
+                        android:text="@{aboutUs.about_description}"
+                        android:textAlignment="center"
+                        app:font='@{"normal"}'
+                        app:textSize='@{"font_body_size"}'
+                        tools:text="Description" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/descTextView"
+                        android:orientation="vertical">
+
+                        <soup.neumorphism.NeumorphCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/webImage"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:contentDescription="@string/image__default_image"
+                                app:srcCompat="@drawable/web" />
+
+                            <TextView
+                                android:id="@+id/WebsiteTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="35dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="12dp"
+                                android:gravity="left"
+                                android:text='@{aboutUs.about_website.equals("") ? "-" : aboutUs.about_website}'
+                                android:textColor="@android:color/holo_blue_dark"
+                                app:font='@{"normal"}'
+                                app:textSize='@{"font_body_size"}'
+                                tools:text="http://www.lol.com" />
+                        </soup.neumorphism.NeumorphCardView>
+
+                        <soup.neumorphism.NeumorphCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <ImageView
+                                android:id="@+id/phoneImage"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="12dp"
+                                app:srcCompat="@drawable/phone" />
+
+                            <TextView
+                                android:id="@+id/phoneTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="43dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="12dp"
+                                android:gravity="left"
+                                android:text='@{aboutUs.about_phone.equals("") ? "-" : aboutUs.about_phone}'
+                                android:textColor="@android:color/holo_blue_dark"
+                                app:font='@{"normal"}'
+                                app:textSize='@{"font_body_size"}'
+                                tools:text="+95923423423" />
+                        </soup.neumorphism.NeumorphCardView>
+
+                        <soup.neumorphism.NeumorphCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/emailImage"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="12dp"
+                                app:srcCompat="@drawable/mail" />
+
+                            <TextView
+                                android:id="@+id/emailTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="45dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="12dp"
+                                android:gravity="left"
+                                android:text='@{aboutUs.about_email.equals("") ? "-" : aboutUs.about_email}'
+                                android:textColor="@android:color/holo_blue_dark"
+                                app:font='@{"normal"}'
+                                app:textSize='@{"font_body_size"}'
+                                tools:text="umer2001.uf@gmail.com" />
+                        </soup.neumorphism.NeumorphCardView>
+
+                        <soup.neumorphism.NeumorphCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/facebookImage"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="12dp"
+                                app:srcCompat="@drawable/facebook" />
+
+                            <TextView
+                                android:id="@+id/facebookTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="43dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="12dp"
+                                android:gravity="left"
+                                android:text='@{aboutUs.facebook.equals("") ? "-" : aboutUs.facebook}'
+                                android:textColor="@android:color/holo_blue_dark"
+                                app:font='@{"normal"}'
+                                app:textSize='@{"font_body_size"}'
+                                tools:text="FB1" />
+                        </soup.neumorphism.NeumorphCardView>
+
+                        <soup.neumorphism.NeumorphCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/twitterImage"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="12dp"
+                                app:srcCompat="@drawable/twitter" />
+
+                            <TextView
+                                android:id="@+id/twitterTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="43dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="12dp"
+                                android:gravity="left"
+                                android:text='@{aboutUs.twitter.equals("") ? "-" : aboutUs.twitter}'
+                                android:textColor="@android:color/holo_blue_dark"
+                                app:font='@{"normal"}'
+                                app:textSize='@{"font_body_size"}'
+                                tools:text="T1" />
+
+                        </soup.neumorphism.NeumorphCardView>
+
+                        <soup.neumorphism.NeumorphCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/instagramImage"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="12dp"
+                                app:srcCompat="@drawable/instagram" />
+
+                            <TextView
+                                android:id="@+id/instaTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="45dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="12dp"
+                                android:gravity="left"
+                                android:text='@{aboutUs.instagram.equals("") ? "-" : aboutUs.instagram}'
+                                android:textColor="@android:color/holo_blue_dark"
+                                app:font='@{"normal"}'
+                                app:textSize='@{"font_body_size"}'
+                                tools:text="Ins1" />
+                        </soup.neumorphism.NeumorphCardView>
+
+                        <soup.neumorphism.NeumorphCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/youtubeImage"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="12dp"
+                                app:srcCompat="@drawable/youtube" />
+
+                            <TextView
+                                android:id="@+id/youtubeTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="43dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="12dp"
+                                android:gravity="left"
+                                android:text='@{aboutUs.youtube.equals("") ? "-" : aboutUs.youtube}'
+                                android:textColor="@android:color/holo_blue_dark"
+                                app:font='@{"normal"}'
+                                app:textSize='@{"font_body_size"}'
+                                tools:text="Y1" />
+                        </soup.neumorphism.NeumorphCardView>
+
+                        <soup.neumorphism.NeumorphCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/pinterestImage"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="12dp"
+                                app:srcCompat="@drawable/pinterest" />
+
+                            <TextView
+                                android:id="@+id/pinterestTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="45dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_marginBottom="8dp"
+                                android:text='@{aboutUs.pinterest.equals("") ? "-" : aboutUs.pinterest}'
+                                android:textColor="@android:color/holo_blue_dark"
+                                app:font='@{"normal"}'
+                                app:textSize='@{"font_body_size"}'
+                                tools:text="P1" />
+                        </soup.neumorphism.NeumorphCardView>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>
