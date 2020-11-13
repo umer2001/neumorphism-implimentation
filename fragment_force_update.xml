@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <soup.neumorphism.NeumorphCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <soup.neumorphism.NeumorphImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_launcher"
+                    app:neumorph_shapeType="flat" />
+
+                <soup.neumorphism.NeumorphTextView
+                    android:id="@+id/textView9"
+                    style="@style/Widget.Neumorph.TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/app__app_name"
+                    android:textColor="@color/Light_Background"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:textColor="@color/text__primary"
+                    android:textSize="18sp"
+                    tools:text="Title" />
+
+                <TextView
+                    android:id="@+id/descriptionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="24dp"
+                    android:ellipsize="end"
+                    android:maxLines="10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/md_green_600"
+                    android:textSize="14sp"
+                    app:font='@{"normal"}'
+                    tools:text="description" />
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/button4"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="32dp"
+                    android:padding="25dp"
+                    android:text="@string/force_update__button_update"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+        </soup.neumorphism.NeumorphCardView>
+
+    </RelativeLayout>
+
+</layout>
