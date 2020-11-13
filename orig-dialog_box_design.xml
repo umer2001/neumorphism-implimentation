@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <soup.neumorphism.NeumorphCardView
+    <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="64dp"
-        app:cardCornerRadius="@dimen/space_8"
+        app:cardCornerRadius="@dimen/space_4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,8 +19,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/Light_Background">
+            android:layout_height="match_parent">
 
 
             <View
@@ -44,12 +43,12 @@
                 android:layout_marginEnd="16dp"
                 android:gravity="center"
                 android:lineSpacingExtra="8sp"
+                tools:text="TextView"
                 android:textAlignment="center"
-                android:textColor="@color/md_grey_600"
+                android:textColor="@color/text__primary"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dialogTitleView"
-                tools:text="TextView" />
+                app:layout_constraintTop_toBottomOf="@+id/dialogTitleView" />
 
             <View
                 android:id="@+id/view18"
@@ -61,20 +60,19 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/dialogMessageTextView" />
 
-            <soup.neumorphism.NeumorphButton
+            <Button
                 android:id="@+id/dialogOkButton"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="15dp"
-                android:textAlignment="center"
+                android:layout_height="45dp"
+                android:background="@color/md_white_1000"
+                tools:text="Button"
                 android:textColor="@color/global__primary"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/dialogCancelButton"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view18"
-                tools:text="Button" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <ImageView
                 android:id="@+id/dialogIconImageView"
@@ -93,31 +91,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                tools:text="TextView"
                 android:textColor="@color/md_white_1000"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/dialogIconImageView"
                 app:layout_constraintStart_toEndOf="@+id/dialogIconImageView"
-                app:layout_constraintTop_toTopOf="@+id/dialogIconImageView"
-                tools:text="TextView" />
-
-            <soup.neumorphism.NeumorphButton
-                android:id="@+id/dialogCancelButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="15dp"
-                android:textAlignment="center"
-                android:textColor="@color/md_grey_600"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/dialogOkButton"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view18"
-                tools:text="Button" />
+                app:layout_constraintTop_toTopOf="@+id/dialogIconImageView" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </soup.neumorphism.NeumorphCardView>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
