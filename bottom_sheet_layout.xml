@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="wallpaper"
+            type="com.panaceasoft.pswallpaper.viewobject.Wallpaper" />
+    </data>
+
+    <!--
+            //remove
+            color
+            date added
+            oreantation
+            credit
+
+            //amend
+            fav -> share
+
+    -->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top|fill"
+        android:layout_marginTop="@dimen/space_56">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Light_Background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <soup.neumorphism.NeumorphImageView
+                    android:id="@+id/setAsCardView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="37dp"
+                    android:paddingBottom="37dp"
+                    app:srcCompat="@drawable/baseline_set_as_red_24" />
+
+                <soup.neumorphism.NeumorphImageView
+                    android:id="@+id/downloadCardView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="35dp"
+                    android:paddingBottom="35dp"
+                    app:srcCompat="@drawable/baseline_download_yellow_24" />
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="0dp"
+                    android:layout_height="95dp"
+                    android:layout_weight="1">
+
+                    <com.like.LikeButton
+                        android:id="@+id/heartButton"
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        app:anim_scale_factor="2"
+                        app:circle_end_color="@color/md_red_600"
+                        app:circle_start_color="@color/md_white_1000"
+                        app:dots_primary_color="@color/md_green_600"
+                        app:dots_secondary_color="@color/md_blue_300"
+                        app:icon_size="20dp"
+                        app:icon_type="heart"
+                        app:is_enabled="true"
+                        app:like_drawable="@drawable/heart_on"
+                        app:unlike_drawable="@drawable/heart_off" />
+
+                </soup.neumorphism.NeumorphCardView>
+
+                <soup.neumorphism.NeumorphImageView
+                    android:id="@+id/shareCardView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="35dp"
+                    android:paddingBottom="35dp"
+                    app:srcCompat="@drawable/baseline_share_puple_24" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="196dp"
+                    android:layout_height="210dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="23dp">
+
+                        <TextView
+                            android:id="@+id/viewCountNumberTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/md_blue_400"
+                            android:textSize="18sp"
+                            tools:text="1.2K" />
+
+                        <TextView
+                            android:id="@+id/viewCountTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/viewCountNumberTextView"
+                            android:text="@string/dbs__viewCount"
+                            android:textAlignment="center"
+                            android:textColor="@color/md_grey_400"
+                            android:textSize="10sp"
+                            tools:text="View Count" />
+
+                        <TextView
+                            android:id="@+id/downloadCountNumberTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/viewCountTextView"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/md_blue_400"
+                            android:textSize="18sp"
+                            tools:text="1.2K" />
+
+                        <TextView
+                            android:id="@+id/downloadCountTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/downloadCountNumberTextView"
+                            android:layout_marginStart="0dp"
+                            android:text="@string/dbs__downloadCount"
+                            android:textAlignment="center"
+                            android:textColor="@color/md_grey_400"
+                            android:textSize="10sp"
+                            tools:text="Download Count" />
+
+                        <TextView
+                            android:id="@+id/favouriteCountNumberTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/downloadCountTextView"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/md_blue_400"
+                            android:textSize="18sp"
+                            tools:text="1.2K" />
+
+                        <TextView
+                            android:id="@+id/favouriteCountTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/favouriteCountNumberTextView"
+                            android:text="@string/dbs__favouriteCount"
+                            android:textAlignment="center"
+                            android:textColor="@color/md_grey_400"
+                            android:textSize="10sp"
+                            tools:text="Favourite Count" />
+
+                    </RelativeLayout>
+
+                </soup.neumorphism.NeumorphCardView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:id="@+id/ratingCardView"
+                        android:layout_width="196dp"
+                        android:layout_height="105dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <RatingBar
+                                android:id="@+id/ratingBar"
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:isIndicator="true"
+                                android:numStars="5" />
+
+                            <TextView
+                                android:id="@+id/ratingBarTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="@string/dbs__rate"
+                                android:textColor="@color/md_black_1000" />
+
+                        </LinearLayout>
+
+
+                    </soup.neumorphism.NeumorphCardView>
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:layout_width="196dp"
+                        android:layout_height="105dp"
+                        android:layout_below="@id/ratingCardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/nameTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="15dp"
+                                android:paddingTop="8dp"
+                                android:text="@string/dbs__name"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/md_grey_400"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/nameValueTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{wallpaper.wallpaper_name}"
+                                android:textAlignment="center"
+                                android:textColor="@color/md_black_1000"
+                                android:textSize="12sp"
+                                tools:text="Name" />
+
+                            <TextView
+                                android:id="@+id/categoryTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:text="@string/dbs__category"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/md_grey_400"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/categoryValueTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{wallpaper.category.cat_name}"
+                                android:textAlignment="center"
+                                android:textColor="@color/md_black_1000"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/categoryTextView"
+                                app:layout_constraintTop_toBottomOf="@+id/categoryTextView"
+                                tools:text="Category" />
+
+                        </LinearLayout>
+
+                    </soup.neumorphism.NeumorphCardView>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/widthHeightColorCardView"
+                    android:layout_width="0dp"
+                    android:layout_height="105dp"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/widthTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:paddingStart="15dp"
+                            android:text="@string/dbs__width"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/md_grey_400"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/widthValueTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@id/textView6"
+                            android:text="@{wallpaper.default_photo.img_width}"
+                            android:textColor="@color/md_black_1000"
+                            android:textSize="16sp"
+                            tools:text="width" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="/"
+                            android:textColor="@color/md_black_1000"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/heightValueTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/textView6"
+                            android:text="@{wallpaper.default_photo.img_height}"
+                            android:textColor="@color/md_black_1000"
+                            android:textSize="16sp"
+                            tools:text="Height" />
+                    </RelativeLayout>
+
+                </soup.neumorphism.NeumorphCardView>
+
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/sizeCardView"
+                    android:layout_width="0dp"
+                    android:layout_height="105dp"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/sizeTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:paddingStart="15dp"
+                            android:text="@string/dbs__size"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/md_grey_400"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/sizeValueTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="@{wallpaper.default_photo.size}"
+                            android:textColor="@color/md_black_1000"
+                            android:textSize="16sp"
+                            tools:text="size" />
+
+                    </RelativeLayout>
+
+                </soup.neumorphism.NeumorphCardView>
+
+            </LinearLayout>
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="105dp">
+
+                <TextView
+                    android:id="@+id/tagsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/dbs__tags"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/md_grey_400"
+                    android:textSize="12sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tagRecyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </soup.neumorphism.NeumorphCardView>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
