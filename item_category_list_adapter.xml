@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="allWallpaperByCategory"
+            type="com.panaceasoft.pswallpaper.viewobject.Category" />
+    </data>
+
+    <soup.neumorphism.NeumorphCardView
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/itemImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="No Image"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{allWallpaperByCategory.default_photo.img_path}"
+                tools:ignore="HardcodedText"
+                tools:srcCompat="@drawable/app_icon" />
+
+            <View
+                android:id="@+id/view52"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/black_alpha_50" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/categoryNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/md_grey_300"
+                    android:textSize="@dimen/font_h5_size"
+                    android:textStyle="bold"
+                    tools:text="20 Category" />
+
+                <TextView
+                    android:id="@+id/productCountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/category__30wallpaper"
+                    android:textColor="@color/md_grey_400"
+                    android:textSize="@dimen/font_body_size" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </soup.neumorphism.NeumorphCardView>
+
+</layout>
