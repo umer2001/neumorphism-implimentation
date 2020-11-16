@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="wallpaper"
+            type="com.panaceasoft.pswallpaper.viewobject.Wallpaper" />
+
+    </data>
+
+    <soup.neumorphism.NeumorphCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:neumorph_shadowElevation="10dp">
+
+        <ImageView
+            android:id="@+id/placeImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/app_icon"
+            app:imageUrl="@{wallpaper.default_photo.image_path_thumb}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/placeImageViewShadow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+
+        <ImageView
+            android:id="@+id/premiumImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:alpha="0.4"
+            android:baselineAlignBottom="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/baseline_cross_white_bg_2"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/premiumTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:alpha="0.5"
+            android:text="@string/premium__premium"
+            android:textColorHint="@color/md_white_1000"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/premiumPriceTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corner_shape_button"
+            android:backgroundTint="@color/heading_text"
+            android:textColor="@color/md_white_1000"
+            android:visibility="visible"
+            tools:text="$ 100" />
+
+    </soup.neumorphism.NeumorphCardView>
+</layout>
