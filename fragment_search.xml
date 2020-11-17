@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="loadingMore"
+            type="boolean" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="15dp"
+                    android:text="@string/sf__ByKeyWord"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sf__Category"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView32"
+                    app:neumorph_shapeType="pressed">
+
+                    <EditText
+                        android:id="@+id/setKeyWord"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/no_background"
+                        android:hint="@string/sf__notSet"
+                        android:inputType="textPersonName"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textCursorDrawable="@drawable/cursor"
+                        android:textSize="14sp"
+                        app:font='@{"normal"}' />
+                </soup.neumorphism.NeumorphCardView>
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView32"
+                    app:neumorph_shapeType="pressed">
+
+                    <EditText
+                        android:id="@+id/setCategoryEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/no_background"
+                        android:hint="@string/sf__notSet"
+                        android:inputType="textPersonName"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textCursorDrawable="@drawable/cursor"
+                        android:textSize="14sp"
+                        app:font='@{"normal"}' />
+                </soup.neumorphism.NeumorphCardView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/colorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:text="@string/sf__Color"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView32"
+                    app:neumorph_shapeType="pressed">
+
+                    <TextView
+                        android:id="@+id/colorEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/no_background"
+                        android:gravity="center"
+                        android:inputType="textPersonName"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:text="@string/search__notSet"
+                        android:textCursorDrawable="@drawable/cursor"
+                        android:textSize="14sp"
+                        app:font='@{"normal"}' />
+
+                </soup.neumorphism.NeumorphCardView>
+
+                <View
+                    android:id="@+id/view11"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/circular_shape" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:text="@string/sf__ByPrice"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/freeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/Light_Background"
+                    android:enabled="false"
+                    android:paddingLeft="@dimen/space_16"
+                    android:text="@string/sf__free"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/font_body_size"
+                    app:font='@{"normal"}' />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/freeSwitch"
+                    style="@style/SwitchCompatStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/premiumButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/Light_Background"
+                    android:enabled="false"
+                    android:paddingLeft="@dimen/space_16"
+                    android:text="@string/sf__premium"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/font_body_size"
+                    app:font='@{"normal"}' />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/premiumSwitch"
+                    style="@style/SwitchCompatStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pointTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:text="@string/sf__Points"
+                android:textSize="16sp"
+                app:font='@{"normal"}' />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView32"
+                    app:neumorph_shapeType="pressed">
+
+                    <EditText
+                        android:id="@+id/minimumEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/no_background"
+                        android:hint="@string/sf__Minimum"
+                        android:inputType="number"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textCursorDrawable="@drawable/cursor"
+                        app:font='@{"normal"}'
+                        tools:ignore="Autofill" />
+                </soup.neumorphism.NeumorphCardView>
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView32"
+                    app:neumorph_shapeType="pressed">
+
+                    <EditText
+                        android:id="@+id/maximumEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/no_background"
+                        android:hint="@string/sf__Maximum"
+                        android:inputType="number"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textCursorDrawable="@drawable/cursor"
+                        android:textSize="14sp"
+                        app:font='@{"normal"}' />
+                </soup.neumorphism.NeumorphCardView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:text="@string/sf__AdvanceFiltering"
+                android:textSize="16sp"
+                app:font='@{"normal"}' />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/isRecommendButton"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:background="@color/Light_Background"
+                    android:drawablePadding="@dimen/space_12"
+                    android:enabled="false"
+                    android:paddingLeft="20dp"
+                    android:text="@string/sf__Recommend"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/font_body_size"
+                    app:font='@{"normal"}' />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/isRecommendSwitch"
+                    style="@style/SwitchCompatStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ratingRangeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:text="@string/sf__Rating"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                app:font='@{"normal"}' />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/minRatingTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search__zero" />
+
+                <TextView
+                    android:id="@+id/toTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/sf__0_5" />
+
+                <TextView
+                    android:id="@+id/maxRatingTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/search_five" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/price_range_bar_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/filter"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="@string/sf__Filter_Button" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
